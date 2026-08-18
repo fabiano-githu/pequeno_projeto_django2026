@@ -1,12 +1,55 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home</title>
+
+    <link rel="stylesheet" href="{% static 'page_static/css/style.css' %}">
 </head>
+
 <body>
 
-    <h1>Minha página inicial</h1>
+    <header>
+        <nav>
+
+            <a href="/home/" class="logo">
+                <span>🌐</span> CHAVIER WEB MÍDIA
+            </a>
+
+            <div class="menu">
+                <a href="/home/">Home</a>
+                <a href="/sobre/">Sobre</a>
+                <a href="/contatos/">Contatos</a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+
+            <h1>Bem-vindo ao meu projeto Django</h1>
+
+            <p>
+                Este é meu primeiro projeto desenvolvido com
+                Python e Django.
+            </p>
+
+            <a href="/contatos/" class="btn">
+                Conheça o projeto
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Meu Projeto Django</p>
+    </footer>
 
 </body>
+
 </html>

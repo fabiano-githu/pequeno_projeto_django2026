@@ -70,4 +70,20 @@ O objetivo deste projeto é consolidar os conhecimentos iniciais em **Django e d
 
 **Fabiano Chavier**
 
+## 🏷️ Identidade do Projeto
+
+Este projeto utiliza a identidade de código:
+
+**`< CHWM := CHAVIERWEBMÍDIA >`**
+
+A assinatura foi criada para padronizar e identificar os arquivos desenvolvidos pela ChavierWebMídia.
+
+O padrão é utilizado nos comentários dos arquivos para facilitar a organização, identificação e manutenção do código.
+
+### Padrão utilizado
+
+```text
+< CHWM := CHAVIERWEBMÍDIA >
+< TECNOLOGIA := SEÇÃO >
+
 Projeto desenvolvido para fins de estudo e prática em desenvolvimento web com Python e Django.

@@ -13,3 +13,4 @@ def contatos(request):
 
 def sobre(request):
     return render(request, 'page_static/sobre.html')
+

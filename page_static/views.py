@@ -1,4 +1,12 @@
 
+'''
+# ============================
+# < CHWM := CHAVIERWEBMÍDIA >
+# < DJANGO := VIEWS >
+# ============================
+
+'''
+
 # Create your views here.
 from django.shortcuts import render
 

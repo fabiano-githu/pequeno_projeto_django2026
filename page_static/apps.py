@@ -1,3 +1,12 @@
+
+"""
+# ============================
+# < CHWM := CHAVIERWEBMÍDIA >
+# < DJANGO := APPS >
+# ============================
+
+"""
+
 from django.apps import AppConfig
 
 

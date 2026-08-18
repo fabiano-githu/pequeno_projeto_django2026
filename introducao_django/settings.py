@@ -1,3 +1,13 @@
+
+"""
+# ============================
+# < CHWM := CHAVIERWEBMÍDIA >
+# < DJANGO := SETTINGS >
+# ============================
+
+"""
+
+
 """
 Django settings for introducao_django project.
 

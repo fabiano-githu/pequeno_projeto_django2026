@@ -1,0 +1,329 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre - ChavierWebMídia</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-info">
+
+
+    <!-- =============================
+         NAVBAR
+         ============================= -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand text-info fw-bold"
+                href="{% url 'home' %}">
+
+                <i class="bi bi-layers-fill me-2"></i>
+
+                CHAVIERWEBMÍDIA
+
+            </a>
+
+
+            <!-- Botão hambúrguer -->
+            <button class="navbar-toggler border border-info"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Home -->
+                    <li class="nav-item">
+
+                        <a class="nav-link text-info"
+                            href="{% url 'home' %}">
+
+                            Início
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Sobre -->
+                    <li class="nav-item">
+
+                        <a class="nav-link active text-info"
+                            aria-current="page"
+                            href="{% url 'sobre' %}">
+
+                            Sobre
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Contatos -->
+                    <li class="nav-item">
+
+                        <a class="nav-link text-info"
+                            href="{% url 'contatos' %}">
+
+                            Contatos
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active text-info"
+                            href="{% url 'servicos' %}">
+
+                            Serviços
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =============================
+         CONTEÚDO
+         ============================= -->
+
+    <main class="container flex-grow-1 bg-info py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <div class="bg-white shadow-sm rounded-4 p-4 p-md-5">
+
+                    <h1 class="display-5 fw-bold text-primary mb-4">
+
+                        Sobre Nós
+
+                    </h1>
+
+
+                    <p class="lead text-dark">
+
+                        Bem-vindo à nossa página! Somos uma empresa
+                        dedicada a oferecer soluções de qualidade para
+                        nossos clientes, com foco em inovação,
+                        compromisso e excelência em tudo o que fazemos.
+
+                    </p>
+
+
+                    <p class="text-secondary">
+
+                        Nossa missão é entregar resultados que fazem
+                        a diferença, combinando tecnologia e atendimento
+                        personalizado.
+
+                    </p>
+
+
+                    <p class="text-secondary">
+
+                        Trabalhamos para criar soluções modernas,
+                        responsivas e acessíveis para diferentes
+                        dispositivos.
+
+                    </p>
+
+
+                    <!-- Botão -->
+                    <a href="{% url 'contatos' %}"
+                        class="btn btn-primary btn-lg mt-3">
+
+                        <i class="bi bi-envelope-fill me-2"></i>
+
+                        Entre em contato
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =============================
+         FOOTER
+         ============================= -->
+
+    <footer class="bg-dark text-info py-5 mt-auto">
+
+        <div class="container">
+
+            <div class="row">
+
+
+                <!-- Coluna 1 -->
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        Minha Empresa
+
+                    </h4>
+
+
+                    <p class="text-info">
+
+                        Projeto desenvolvido para estudar
+                        Bootstrap 5 e layout responsivo.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Coluna 2 -->
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        Links
+
+                    </h4>
+
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'home' %}"
+                                class="text-info text-decoration-none">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'sobre' %}"
+                                class="text-info text-decoration-none">
+
+                                Sobre
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'contatos' %}"
+                                class="text-info text-decoration-none">
+
+                                Contatos
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Coluna 3 -->
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        Contatos
+
+                    </h4>
+
+
+                    <p class="text-info mb-2">
+
+                        <i class="bi bi-envelope me-2"></i>
+
+                        contato@empresa.com
+
+                    </p>
+
+
+                    <p class="text-info">
+
+                        <i class="bi bi-telephone me-2"></i>
+
+                        (21) 99999-9999
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-info ">
+
+
+            <div class="text-center text-info">
+
+                © 2026 Todos os direitos reservados -
+                Minha Empresa
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =============================
+         BOOTSTRAP JAVASCRIPT
+         ============================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

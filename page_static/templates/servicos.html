@@ -1,0 +1,593 @@
+<!-- =============================
+     < CHWM := CHAVIERWEBMÍDIA >
+     < HTML := PÁGINA SERVIÇOS >
+     ============================= -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Serviços - ChavierWebMídia</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+
+    <!-- =============================
+         NAVBAR
+         ============================= -->
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+
+            <a class="navbar-brand text-info fw-bold"
+                href="{% url 'home' %}">
+
+                <i class="bi bi-layers-fill me-2"></i>
+
+                ChavierWebMídia
+
+            </a>
+
+
+            <!-- Botão Hambúrguer -->
+
+            <button class="navbar-toggler border border-info rounded-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <i class="bi bi-list text-info fs-2"></i>
+
+            </button>
+
+
+            <!-- Menu -->
+
+            <div class="collapse navbar-collapse"
+                id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link text-info"
+                            href="{% url 'home' %}">
+
+                            Início
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link text-info"
+                            href="{% url 'sobre' %}">
+
+                            Sobre
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active text-info"
+                            href="{% url 'servicos' %}">
+
+                            Serviços
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link text-info"
+                            href="{% url 'contatos' %}">
+
+                            Contatos
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =============================
+         CABEÇALHO
+         ============================= -->
+
+    <header class="bg-info flex-grow-1 text-dark py-5">
+
+        <div class="container text-center">
+
+            <i class="bi bi-briefcase-fill display-4"></i>
+
+            <h1 class="display-5 fw-bold mt-3">
+
+                Nossos Serviços
+
+            </h1>
+
+            <p class="lead mb-0">
+
+                Soluções digitais para ajudar sua empresa
+                a crescer na internet.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =============================
+         SERVIÇOS
+         ============================= -->
+
+    <main class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold text-primary">
+
+                O que oferecemos
+
+            </h2>
+
+            <p class="text-secondary">
+
+                Conheça alguns dos nossos principais serviços.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Serviço 1 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-code-slash text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            Desenvolvimento Web
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Desenvolvimento de sites modernos,
+                            responsivos e adaptados para celulares,
+                            tablets e computadores.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 2 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-phone-fill text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            Sites Responsivos
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Criamos layouts que funcionam
+                            perfeitamente em diferentes tamanhos
+                            de tela.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 3 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-palette-fill text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            Design
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Interfaces modernas, organizadas
+                            e pensadas para proporcionar uma
+                            boa experiência ao usuário.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 4 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-megaphone-fill text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            Marketing Digital
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Estratégias digitais para aumentar
+                            a presença da sua empresa na internet.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 5 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-search text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            SEO
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Melhorias para ajudar seu site a ser
+                            encontrado pelos mecanismos de busca.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 6 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-headset text-info display-4"></i>
+
+                        <h3 class="card-title text-primary mt-3">
+
+                            Suporte
+
+                        </h3>
+
+                        <p class="card-text text-secondary">
+
+                            Suporte e manutenção para manter
+                            seu projeto funcionando corretamente.
+
+                        </p>
+
+                        <a href="{% url 'contatos' %}"
+                            class="btn btn-info">
+
+                            Saiba mais
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =============================
+         CHAMADA PARA AÇÃO
+         ============================= -->
+
+    <section class="bg-primary text-white py-5">
+
+        <div class="container text-center">
+
+            <h2 class="fw-bold">
+
+                Precisa de um serviço?
+
+            </h2>
+
+            <p class="lead">
+
+                Entre em contato conosco e fale sobre
+                seu projeto.
+
+            </p>
+
+            <a href="{% url 'contatos' %}"
+                class="btn btn-info btn-lg">
+
+                <i class="bi bi-envelope-fill me-2"></i>
+
+                Entrar em contato
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =============================
+         FOOTER
+         ============================= -->
+
+    <footer class="bg-dark text-info py-5">
+
+        <div class="container">
+
+            <div class="row">
+
+
+                <!-- Coluna 1 -->
+
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        ChavierWebMídia
+
+                    </h4>
+
+                    <p class="text-info">
+
+                        Projeto desenvolvido para estudar
+                        Bootstrap 5 e layout responsivo.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Coluna 2 -->
+
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        Links
+
+                    </h4>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'home' %}"
+                                class="text-info text-decoration-none">
+
+                                Início
+
+                            </a>
+
+                        </li>
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'sobre' %}"
+                                class="text-info text-decoration-none">
+
+                                Sobre
+
+                            </a>
+
+                        </li>
+
+                        <li class="mb-2">
+
+                            <a href="{% url 'servicos' %}"
+                                class="text-info text-decoration-none">
+
+                                Serviços
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="{% url 'contatos' %}"
+                                class="text-info text-decoration-none">
+
+                                Contatos
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Coluna 3 -->
+
+                <div class="col-12 col-md-4 mb-4">
+
+                    <h4 class="text-info">
+
+                        Contatos
+
+                    </h4>
+
+                    <p class="text-info">
+
+                        <i class="bi bi-envelope me-2"></i>
+
+                        contato@empresa.com
+
+                    </p>
+
+                    <p class="text-info">
+
+                        <i class="bi bi-telephone me-2"></i>
+
+                        (21) 99999-9999
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary">
+
+
+            <div class="text-center text-info">
+
+                © 2026 Todos os direitos reservados -
+                ChavierWebMídia
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -9,209 +9,184 @@
    ============================== */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f7;
-    color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f0c0c;
+  color: #222;
 
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 
-/* ==============================
-   HEADER
-   ============================== */
+.navbar {
+  background-color:  #0d0e0f;
 
-header {
-    background-color: #2807be;
-    padding: 15px 50px;
+
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo{
+  color:#0d6efd;
 }
 
+.nav-link{
+  color:#0d6efd;
 
-/* ==============================
-   LOGO
-   ============================== */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    color: rgb(53, 184, 189);
-    text-decoration: none;
-
-    font-size: 24px;
-    font-weight: bold;
 }
 
-.logo span {
-    font-size: 70px;
+/* ==========================================
+   HERO
+   ========================================== */
+
+
+.hero {
+ background-color: #a6c1db;
 }
 
-
-/* ==============================
-   MENU
-   ============================== */
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.box_card {
+  background-color: #a6c1db;
+  
 }
 
-.menu a {
-    color: white;
-    text-decoration: none;
+.box_card .card {
+  background-color: #0f1c24;
+  color:#a6c1db;
 
-    font-size: 16px;
-    font-weight: bold;
 
-    transition: 0.3s;
 }
 
-.menu a:hover {
-    color: #00aaff;
+.titulo {
+  color: #0d6efd;
+
+
 }
 
+/* ==========================================
+   PLACEHOLDER DAS IMAGENS
+   ========================================== */
 
-/* ==============================
-   CONTEÚDO PRINCIPAL
-   ============================== */
+.imagem-placeholder {
+  height: 250px;
 
-main {
-    flex: 1;
+  display: flex;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
 
-    padding: 50px 20px;
+  justify-content: center;
+
+  background-color: #ddd;
+
+  border: 2px dashed #999;
+
+  color: #851f1f;
+
+  margin-top: 20px;
 }
 
+/* Imagem maior */
 
-/* ==============================
-   HOME
-   ============================== */
-
-.home {
-    max-width: 800px;
-    text-align: center;
+.imagem-placeholder.grande {
+  height: 350px;
 }
 
-.home h1 {
-    color: rgb(6, 1, 12);
-    font-size: 48px;
-    margin-bottom: 20px;
+/* ==========================================
+   ÍCONES DOS CARDS
+   ========================================== */
+
+.icone {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #0d6efd;
+
+  color: white;
+
+  border-radius: 50%;
+
+  font-weight: bold;
 }
 
-.home p {
-    color: rgb(3, 1, 15);
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+/* ==========================================
+   SEÇÃO SOBRE
+   ========================================== */
+
+.sobre {
+  background-color: #f8f9fa;
 }
 
+/* ==========================================
+   CALL TO ACTION
+   ========================================== */
 
-/* ==============================
-   BOTÃO
-   ============================== */
+.cta {
+  background-color: #0d6efd !important;
 
-.btn {
-    display: inline-block;
-
-    padding: 14px 30px;
-
-    background-color: #2807be;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+  color: white;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+/* ==========================================
+   LINKS
+   ========================================== */
+
+.footer {
+  background-color:  #0d0e0f;
+  color: #0d6efd;
+  text-decoration: none;
 }
 
-
-/* ==============================
-   FOOTER
-   ============================== */
-
-footer {
-    background-color: #2807be;
-    color: rgb(53, 184, 189);
-
-    text-align: center;
-
-    padding: 20px;
-
-    width: 100%;
+footer a:hover {
+  text-decoration: underline;
 }
 
-
-/* ==============================
+/* ==========================================
    RESPONSIVIDADE
-   ============================== */
+   ========================================== */
 
-@media (max-width: 768px) {
+/* Tablets */
 
-    header {
-        padding: 15px 20px;
-    }
+@media (max-width: 991px) {
+  .hero {
+    padding: 60px 0;
+  }
+}
 
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
+/* Celulares */
 
-    .logo {
-        font-size: 20px;
-    }
+@media (max-width: 767px) {
+  .hero {
+    text-align: center;
 
-    .logo span {
-        font-size: 32px;
-    }
+    padding: 40px 0;
+  }
 
-    .menu {
-        gap: 15px;
-    }
+  .hero h1 {
+    font-size: 2rem;
+  }
 
-    .menu a {
-        font-size: 14px;
-    }
+  .imagem-placeholder {
+    height: 200px;
+  }
 
-    .home h1 {
-        font-size: 36px;
-    }
-
-    .home p {
-        font-size: 18px;
-    }
+  .imagem-placeholder.grande {
+    height: 250px;
+  }
 }

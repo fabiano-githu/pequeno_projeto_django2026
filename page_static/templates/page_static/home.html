@@ -13,23 +13,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wireframe Responsivo com Bootstrap</title>
+     <!-- link Bootstrap icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- link css-->
-    <link rel="stylesheet" href="{% static 'page_static/templates/css/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Titutlo do Site-->
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg">
 
         <div class="container-fluid">
 
             <!-- Logo -->
-            <a class="navbar-brand" href="#">Minha Empresa</a>
+            <a class="logo navbar-brand d-flex align-items-center" href="#">
+               <i class="bi bi-layers-fill me-2" ></i>
+                ChavierWebMidia
+            </a>
 
             <!-- Botão do menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
@@ -87,7 +93,7 @@
                 <!-- Conteúdo -->
                 <div class="col-12 col-md-7">
 
-                    <h1 class="display-4">
+                    <h1 class="titulo display-4">
                         Layout Responsivo
                     </h1>
 
@@ -106,11 +112,8 @@
 
                 <!-- Imagem -->
                 <div class="col-12 col-md-5">
-
-                    <div class="imagem-placeholder">
-                        Imagem
-                    </div>
-
+                    <img src="{% static '/img/istockphoto-2149125445-1024x1024.jpg' %}" alt="Descrição da imagem"
+                        class="imagem-placeholder">
                 </div>
 
             </div>
@@ -122,7 +125,7 @@
 
 
     <!-- seção de recursos -->
-    <section class="py-5">]
+    <section class="box_card py-5">]
 
         <div class="container">
 
@@ -141,7 +144,7 @@
         <div class="row g-4">
 
             <!--CARD 1-->
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="cads col-12 col-md-6 col-lg-3">
 
                 <div class="card h-100">
 
@@ -165,7 +168,7 @@
 
                 <div class="card h-100">
 
-                    <div class="card-boby text-center">
+                    <div class="card-body text-center">
 
                         <div class="icone">
                             02
@@ -185,14 +188,14 @@
 
                 <div class="card h-100">
 
-                    <div class="card-boby text-center">
+                    <div class="card-body text-center">
 
-                        <div class="icone">
-                            03
+                        <div class="icone text-primary ">
+                            <div class="text-white">03</div>
                         </div>
 
-                        <h3 class="card-title">Grid</h3>
-                        <p class="card-text">
+                        <h3 class="card-title text-primary ">Grid</h3>
+                        <p class="card-text text-primaryt ">
                             Organização do conteúdo utilizando linhas e colunas.
                         </p>
 
@@ -205,7 +208,7 @@
 
                 <div class="card h-100">
 
-                    <div class="card-boby text-center">
+                    <div class="card-body text-center">
 
                         <div class="icone">
                             04
@@ -228,7 +231,7 @@
 
 
     <!--Footer-->
-    <footer class="bg-dark text-white py-5 stick-footer">
+    <footer class="footer text-white py-5 sticky-footer">
 
         <div class="container">
 
@@ -237,9 +240,9 @@
                 <!--coluna 1-->
                 <div class="col-12 col-md-4 mb-4">
 
-                    <h4>Minha Empresa</h4>
+                    <h4 class="text-primary">Minha Empresa</h4>
 
-                    <p> Projeto desevolvimento para estudar Boostrap 5 e layout Responsivo</p>
+                    <p class="text-primary"> Projeto desevolvimento para estudar Boostrap 5 e layout Responsivo</p>
 
 
                 </div>
@@ -247,19 +250,19 @@
                 <!--coluna 2-->
                 <div class="col-12 col-md-4 mb-4">
 
-                    <h4>Links</h4>
+                    <h4 class="text-primary">Links</h4>
                     <ul class="list-unstyled">
 
                         <li>
-                            <a href="#" class="text-white">Home</a>
+                            <a href="#" class="text-primary">Home</a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white">Sobre</a>
+                            <a href="#" class="text-primary">Sobre</a>
                         </li>
-                         
+
                         <li>
-                            <a href="#" class="text-white">Serviços</a>
+                            <a href="#" class="text-primary">Serviços</a>
                         </li>
 
                     </ul>
@@ -267,14 +270,14 @@
 
                 <!--coluna 3-->
                 <div class="col-12 col-md-4 mb-4">
-                    <h4>Contatos</h4>
-                    <p>contado@empresa.com</p>
-                    <p>(21)99999-9999</p>
+                    <h4 class="text-primary">Contatos</h4>
+                    <p class="text-primary">contado@empresa.com</p>
+                    <p class="text-primary">(21)99999-9999</p>
                 </div>
 
                 <hr>
 
-                <div class="text-center">
+                <div class="text-center text-primary">
                     @2026 Todos os direitos reservados - Minha Empresa
                 </div>
 

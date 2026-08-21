@@ -122,17 +122,13 @@ USE_I18N = True
 USE_TZ = True
 
 
+import os  # confere se já tem esse import no topo do arquivo
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
 
-
-# Email
-# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
-
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-    },
-}
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'page_static', 'templates'),
+]

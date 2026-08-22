@@ -18,13 +18,14 @@
 
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
@@ -42,8 +43,7 @@
 
 
             <!-- Logo -->
-            <a class="navbar-brand text-info fw-bold d-flex align-items-center"
-                href="{% url 'home' %}">
+            <a class="navbar-brand text-info fw-bold d-flex align-items-center" href="{% url 'home' %}">
 
                 <i class="bi bi-layers-fill me-2"></i>
 
@@ -53,13 +53,8 @@
 
 
             <!-- Botão Hambúrguer -->
-            <button class="navbar-toggler border text-info rounded-3"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu"
-                aria-controls="menu"
-                aria-expanded="false"
-                aria-label="Abrir menu">
+            <button class="navbar-toggler border text-info rounded-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -75,8 +70,7 @@
                     <!-- Início -->
                     <li class="nav-item">
 
-                        <a class="nav-link text-info"
-                            href="{% url 'home' %}">
+                        <a class="nav-link text-info" href="{% url 'home' %}">
 
                             Início
 
@@ -88,8 +82,7 @@
                     <!-- Sobre -->
                     <li class="nav-item">
 
-                        <a class="nav-link text-info"
-                            href="{% url 'sobre' %}">
+                        <a class="nav-link text-info" href="{% url 'sobre' %}">
 
                             Sobre
 
@@ -97,13 +90,20 @@
 
                     </li>
 
+                    <li class="nav-item">
+
+                        <a class="nav-link active  text-info" href="{% url 'servicos' %}">
+
+                            Serviços
+
+                        </a>
+
+                    </li>
 
                     <!-- Contatos -->
                     <li class="nav-item">
 
-                        <a class="nav-link active text-info"
-                            aria-current="page"
-                            href="{% url 'contatos' %}">
+                        <a class="nav-link active text-info" aria-current="page" href="{% url 'contatos' %}">
 
                             Contatos
 
@@ -155,9 +155,7 @@
                          FORMULÁRIO
                          ============================= -->
 
-                    <form method="post"
-                        action=""
-                        class="mt-4">
+                    <form method="post" action="" class="mt-4">
 
                         {% csrf_token %}
 
@@ -165,19 +163,14 @@
                         <!-- Nome -->
                         <div class="mb-3">
 
-                            <label for="nome"
-                                class="form-label fw-semibold">
+                            <label for="nome" class="form-label fw-semibold">
 
                                 Nome
 
                             </label>
 
-                            <input type="text"
-                                id="nome"
-                                name="nome"
-                                class="form-control form-control-lg"
-                                placeholder="Digite seu nome"
-                                required>
+                            <input type="text" id="nome" name="nome" class="form-control form-control-lg"
+                                placeholder="Digite seu nome" required>
 
                         </div>
 
@@ -185,19 +178,14 @@
                         <!-- E-mail -->
                         <div class="mb-3">
 
-                            <label for="email"
-                                class="form-label fw-semibold">
+                            <label for="email" class="form-label fw-semibold">
 
                                 E-mail
 
                             </label>
 
-                            <input type="email"
-                                id="email"
-                                name="email"
-                                class="form-control form-control-lg"
-                                placeholder="Digite seu e-mail"
-                                required>
+                            <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                placeholder="Digite seu e-mail" required>
 
                         </div>
 
@@ -205,26 +193,20 @@
                         <!-- Mensagem -->
                         <div class="mb-3">
 
-                            <label for="mensagem"
-                                class="form-label fw-semibold">
+                            <label for="mensagem" class="form-label fw-semibold">
 
                                 Mensagem
 
                             </label>
 
-                            <textarea id="mensagem"
-                                name="mensagem"
-                                class="form-control"
-                                rows="5"
-                                placeholder="Digite sua mensagem"
-                                required></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="5"
+                                placeholder="Digite sua mensagem" required></textarea>
 
                         </div>
 
 
                         <!-- Botão -->
-                        <button type="submit"
-                            class="btn btn-primary btn-lg">
+                        <button type="submit" class="btn btn-primary btn-lg">
 
                             <i class="bi bi-send-fill me-2"></i>
 
@@ -327,8 +309,7 @@
 
                         <li class="mb-2">
 
-                            <a href="{% url 'home' %}"
-                                class="text-info text-decoration-none">
+                            <a href="{% url 'home' %}" class="text-info text-decoration-none">
 
                                 Home
 
@@ -339,8 +320,7 @@
 
                         <li class="mb-2">
 
-                            <a href="{% url 'sobre' %}"
-                                class="text-info text-decoration-none">
+                            <a href="{% url 'sobre' %}" class="text-info text-decoration-none">
 
                                 Sobre
 
@@ -351,8 +331,7 @@
 
                         <li class="mb-2">
 
-                            <a href="{% url 'contatos' %}"
-                                class="text-info text-decoration-none">
+                            <a href="{% url 'contatos' %}" class="text-info text-decoration-none">
 
                                 Contatos
 

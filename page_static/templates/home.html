@@ -22,6 +22,9 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+
 </head>
 
 
@@ -84,6 +87,17 @@
                     </li>
 
 
+                    <li class="nav-item">
+
+                        <a class="nav-link active  text-info" href="{% url 'servicos' %}">
+
+                            Serviços
+
+                        </a>
+
+                    </li>
+
+
                     <!-- Contatos -->
                     <li class="nav-item">
 
@@ -95,18 +109,7 @@
 
                     </li>
 
-                    <li class="nav-item">
 
-                        <a class="nav-link active  text-info"
-                            href="{% url 'servicos' %}">
-
-                            Serviços
-
-                        </a>
-
-                    </li>
-
-                    
 
 
                 </ul>
@@ -160,7 +163,7 @@
                 <!-- Imagem -->
                 <div class="col-12 col-md-5 text-center">
 
-                    <img src="{% static 'img/istockphoto-2149125445-1024x1024.jpg' %}"
+                    <img src="{% static 'static/img/istockphoto-2149125445-1024x1024.jpg' %}"
                         alt="Imagem representando layout responsivo" class="img-fluid rounded-4 shadow">
 
                 </div>
@@ -354,7 +357,7 @@
          FOOTER
          ============================= -->
 
-    <footer class="bg-dark border-top border-secondary  text-info py-5">
+    <footer class=" border-top border-secondary  text-info py-5">
 
         <div class="container">
 

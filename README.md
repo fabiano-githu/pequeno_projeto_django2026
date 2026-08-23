@@ -1,89 +1,172 @@
-# 🐍 Pequeno Projeto Django 2026
+# 🌐 ChavierWebMídia | Projeto Django 2026
 
-Projeto desenvolvido em **Python e Django** com o objetivo de praticar os fundamentos do desenvolvimento web utilizando o framework Django.
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![Django](https://img.shields.io/badge/Django-6.x-green?logo=django)
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-purple?logo=bootstrap)
+![Git](https://img.shields.io/badge/Git-red?logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)
+![VS Code](https://img.shields.io/badge/VS%20Code-blue?logo=visualstudiocode)
+
+---
 
 ## 📌 Sobre o projeto
 
-Este projeto é uma aplicação web simples criada durante os estudos de Django.
+O **ChavierWebMídia** é um projeto de desenvolvimento web criado com **Python e Django**, desenvolvido durante meus estudos e evolução na área de programação.
 
-Até o momento, foram implementadas páginas básicas para praticar a criação de **URLs, Views e Templates**.
+O projeto começou como uma aplicação simples para praticar os fundamentos do Django e foi evoluindo gradualmente para um **site institucional responsivo**, com identidade visual própria, navegação entre páginas, apresentação de serviços, certificados, conhecimentos e canais de contato.
 
-## 🚀 Funcionalidades
+O projeto também funciona como uma base para apresentação dos meus conhecimentos, cursos, certificados, tecnologias estudadas e evolução profissional na área de desenvolvimento.
 
-* 🏠 Página inicial
-* 📞 Página de contatos
-* ℹ️ Página sobre
-* 🔗 Configuração de rotas com Django
-* 🎨 Criação de templates HTML
-* 🐍 Integração entre `urls.py` e `views.py`
-
-## 🛠️ Tecnologias utilizadas
-
-* **Python 3.13**
-* **Django 6.1**
-* **HTML5**
-* **Git**
-* **GitHub**
-* **Visual Studio Code**
-
-## 📂 Estrutura do projeto
-
-```text
-pequeno_projeto_django2026/
-│
-├── README.md
-├── manage.py
-│
-├── introducao_django/
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
-│
-└── page_static/
-    ├── views.py
-    └── templates/
-        └── page_static/
-            ├── home.html
-            ├── contatos.html
-            └── sobre.html
-```
-
-## 📚 Conceitos praticados
-
-Neste projeto estou praticando:
-
-* Estrutura básica de um projeto Django
-* Criação de aplicações
-* Configuração do `settings.py`
-* Criação de rotas com `urls.py`
-* Criação de funções em `views.py`
-* Renderização de páginas HTML com `render()`
-* Organização de templates
-* Utilização do Git e GitHub
+---
 
 ## 🎯 Objetivo
 
-O objetivo deste projeto é consolidar os conhecimentos iniciais em **Django e desenvolvimento web com Python**, servindo como base para projetos mais completos no futuro.
+O principal objetivo deste projeto é praticar e consolidar conhecimentos em:
 
-## 👨‍💻 Autor
+- 🐍 Python
+- 🌐 Django
+- HTML5
+- CSS3
+- Bootstrap 5
+- Bootstrap Icons
+- JavaScript
+- Git
+- GitHub
+- Desenvolvimento Web
+- Responsividade
+- Templates Django
+- URLs e Views
+- Organização de projetos
+- Controle de versões
 
-**Fabiano Chavier**
+Além disso, o projeto representa uma etapa da minha evolução no aprendizado de desenvolvimento web.
 
-## 🏷️ Identidade do Projeto
+---
 
-Este projeto utiliza a identidade de código:
+# 🏠 Página Inicial
 
-**`< CHWM := CHAVIERWEBMÍDIA >`**
+A página inicial apresenta a identidade da **ChavierWebMídia** e funciona como porta de entrada para o site.
 
-A assinatura foi criada para padronizar e identificar os arquivos desenvolvidos pela ChavierWebMídia.
+### Recursos implementados
 
-O padrão é utilizado nos comentários dos arquivos para facilitar a organização, identificação e manutenção do código.
+- Logo da ChavierWebMídia
+- Navbar responsiva
+- Menu de navegação
+- Seção principal / Hero
+- Texto de apresentação
+- Imagem de destaque
+- Botões de navegação
+- Seção de recursos
+- Cards informativos
+- Footer
+- Links para as demais páginas
 
-### Padrão utilizado
+---
 
-```text
-< CHWM := CHAVIERWEBMÍDIA >
-< TECNOLOGIA := SEÇÃO >
+# 👥 Sobre Nós
 
-Projeto desenvolvido para fins de estudo e prática em desenvolvimento web com Python e Django.
+A página **Sobre Nós** apresenta informações sobre a proposta da ChavierWebMídia.
+
+### Conteúdo
+
+- Apresentação
+- Missão
+- Compromisso
+- Tecnologia
+- Responsividade
+- Atendimento
+- Soluções digitais
+- Botão para contato
+
+A página foi desenvolvida utilizando Bootstrap para manter uma estrutura responsiva e organizada.
+
+---
+
+# 💼 Serviços
+
+A página de **Serviços** apresenta as áreas e soluções relacionadas à tecnologia e desenvolvimento web.
+
+### Áreas apresentadas
+
+- 🌐 Desenvolvimento Web
+- 🐍 Python
+- Django
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- ☕ Java
+- Spring Boot
+- Git
+- GitHub
+- Desenvolvimento de páginas responsivas
+- Desenvolvimento de sistemas
+- Soluções digitais
+
+Os serviços são apresentados através de cards responsivos, permitindo uma melhor visualização em diferentes tamanhos de tela.
+
+---
+
+# 🏆 Certificados e Conhecimentos
+
+O projeto possui uma seção específica para apresentar certificados, cursos e conhecimentos adquiridos durante minha formação.
+
+Cada certificado pode apresentar:
+
+- 📜 Nome do curso
+- 🏫 Instituição
+- ⏱️ Carga horária
+- 📅 Ano de início
+- 📅 Ano de conclusão
+- 📝 Descrição
+- 🖼️ Imagem do certificado
+
+---
+
+## 💻 Certificados relacionados à TI
+
+A seção de tecnologia pode apresentar certificados e conhecimentos relacionados a:
+
+- 🐍 Python
+- Django
+- ☕ Java
+- Spring Boot
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- Git
+- GitHub
+- Desenvolvimento Web
+- Programação
+
+---
+
+## 📚 Cursos adicionais
+
+Também existe uma área destinada a cursos e conhecimentos complementares.
+
+A separação permite organizar melhor:
+
+### Tecnologia e TI
+
+Cursos e conhecimentos diretamente relacionados à área de tecnologia.
+
+### Cursos adicionais
+
+Cursos e conhecimentos complementares que fazem parte da formação profissional.
+
+---
+
+# 🖼️ Visualização dos certificados
+
+Os certificados são apresentados através de cards.
+
+Ao clicar na imagem do certificado, é utilizado o **Modal do Bootstrap** para abrir a imagem em tamanho maior.
+
+Exemplo:
+
+```html

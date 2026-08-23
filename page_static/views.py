@@ -23,5 +23,9 @@ def servicos(request):
     return render(request, 'servicos.html')
 
 
+def certificados(request):
+    return render(request, 'certificados.html')
+
+
 def contatos(request):
     return render(request, 'contatos.html')

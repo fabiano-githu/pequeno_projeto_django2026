@@ -8,7 +8,7 @@
    >    CONFIGURAÇÃO GERAL
    ============================== */
 
-  
+
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +20,12 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:  #1825e0;;
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  background-color: #1825e0;
+
   color: #222;
 
   min-height: 100vh;
@@ -33,16 +37,33 @@ body {
 
 .navbar {
   background-color: #0d0e0f;
-
-
+  overflow: visible;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(13, 110, 253)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar-brand {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  /* mesmo tamanho da logo normal */
+  height: 130px;
+  overflow: visible;
 }
 
-.logo {
-  color: #0d6efd;
+.navbar-brand img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  z-index: 1;
+  margin-left: 60px;
+  margin-top: -40px;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.5);
 }
 
 .nav-link {
@@ -78,13 +99,13 @@ body {
 }
 
 .img-fluid {
-    transition: transform 0.3s ease, width 0.3s ease;
+  width: 10000px;
+  height: auto;
+
+
 }
 
-.img-fluid:hover {
-    transform: scale(1.1); /* aumenta o tamanho em 10% */
-    width: 90%;            /* diminui a largura (ajuste o valor como quiser) */
-}
+
 
 /* ==========================================
    PLACEHOLDER DAS IMAGENS

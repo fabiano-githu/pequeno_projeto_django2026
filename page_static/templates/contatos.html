@@ -18,14 +18,27 @@
 
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Caveat -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{% static 'static/css/style.css' %}">
 
 </head>
 
@@ -45,15 +58,14 @@
             <!-- Logo -->
             <a class="navbar-brand text-info fw-bold d-flex align-items-center" href="{% url 'home' %}">
 
-                <i class="bi bi-layers-fill me-2"></i>
-
-                ChavierWebMidia
+                <img src="{% static 'static/img/Logo_Designfff-removebg-preview.png' %}" alt="Logo ChavierWebMídia"
+                    class="img me-2">
 
             </a>
 
 
             <!-- Botão Hambúrguer -->
-            <button class="navbar-toggler border text-info rounded-3" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border border-info rounded-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
 
                 <span class="navbar-toggler-icon"></span>
@@ -90,15 +102,18 @@
 
                     </li>
 
+
+                    <!-- Serviços -->
                     <li class="nav-item">
 
-                        <a class="nav-link active  text-info" href="{% url 'servicos' %}">
+                        <a class="nav-link text-info" href="{% url 'servicos' %}">
 
                             Serviços
 
                         </a>
 
                     </li>
+
 
                     <!-- Contatos -->
                     <li class="nav-item">
@@ -111,6 +126,7 @@
 
                     </li>
 
+
                 </ul>
 
             </div>
@@ -120,135 +136,355 @@
     </nav>
 
 
+
     <!-- =============================
          CONTEÚDO
          ============================= -->
 
-    <main class="container flex-grow-1  py-5">
+    <main class="container flex-grow-1 bg-info py-5">
 
         <div class="row justify-content-center">
 
             <div class="col-12 col-md-10 col-lg-8">
 
 
-                <!-- Card do formulário -->
-                <div class="bg-white shadow rounded-4 p-4 p-md-5">
+                <!-- =============================
+                     CARD PRINCIPAL
+                     ============================= -->
+
+                <div class="shadow-sm rounded-4 p-4 p-md-5 border border-dark">
 
 
                     <!-- Título -->
-                    <h1 class="display-5 fw-bold text-primary mb-4">
+                    <h1 class="display-5 fw-bold text-white mb-4">
 
                         Entre em Contato
 
                     </h1>
 
 
+                    <!-- Introdução -->
                     <p class="lead text-dark">
 
-                        Ficou com alguma dúvida ou quer falar
-                        com a gente? Preencha o formulário abaixo:
+                        Estamos prontos para ouvir você. Se deseja tirar
+                        uma dúvida, solicitar informações ou conversar
+                        sobre um novo projeto, entre em contato conosco.
 
                     </p>
+
+
+                    <p class="text-dark">
+
+                        Conte um pouco sobre sua necessidade através do
+                        formulário abaixo. Teremos prazer em conhecer
+                        sua ideia e buscar uma solução adequada para
+                        o seu projeto.
+
+                    </p>
+
 
 
                     <!-- =============================
                          FORMULÁRIO
                          ============================= -->
 
-                    <form method="post" action="" class="mt-4">
+                    <h2 class="text-white fw-bold mt-5 mb-4">
+
+                        <i class="bi bi-chat-square-text-fill me-2"></i>
+
+                        Envie sua mensagem
+
+                    </h2>
+
+
+                    <form method="post" action="" class="mt-3">
 
                         {% csrf_token %}
 
 
                         <!-- Nome -->
-                        <div class="mb-3">
+                        <div class="mb-4">
 
-                            <label for="nome" class="form-label fw-semibold">
+                            <label for="nome" class="form-label fw-semibold text-dark">
 
                                 Nome
 
                             </label>
 
-                            <input type="text" id="nome" name="nome" class="form-control form-control-lg"
-                                placeholder="Digite seu nome" required>
+                            <input type="text" id="nome" name="nome"
+                                class="form-control form-control-lg border border-dark" placeholder="Digite seu nome"
+                                required>
 
                         </div>
 
 
                         <!-- E-mail -->
-                        <div class="mb-3">
+                        <div class="mb-4">
 
-                            <label for="email" class="form-label fw-semibold">
+                            <label for="email" class="form-label fw-semibold text-dark">
 
                                 E-mail
 
                             </label>
 
-                            <input type="email" id="email" name="email" class="form-control form-control-lg"
-                                placeholder="Digite seu e-mail" required>
+                            <input type="email" id="email" name="email"
+                                class="form-control form-control-lg border border-dark" placeholder="Digite seu e-mail"
+                                required>
+
+                        </div>
+
+
+                        <!-- Assunto -->
+                        <div class="mb-4">
+
+                            <label for="assunto" class="form-label fw-semibold text-dark">
+
+                                Assunto
+
+                            </label>
+
+                            <input type="text" id="assunto" name="assunto"
+                                class="form-control form-control-lg border border-dark" placeholder="Digite o assunto">
 
                         </div>
 
 
                         <!-- Mensagem -->
-                        <div class="mb-3">
+                        <div class="mb-4">
 
-                            <label for="mensagem" class="form-label fw-semibold">
+                            <label for="mensagem" class="form-label fw-semibold text-dark">
 
                                 Mensagem
 
                             </label>
 
-                            <textarea id="mensagem" name="mensagem" class="form-control" rows="5"
+                            <textarea id="mensagem" name="mensagem" class="form-control border border-dark" rows="6"
                                 placeholder="Digite sua mensagem" required></textarea>
 
                         </div>
 
 
                         <!-- Botão -->
-                        <button type="submit" class="btn btn-primary btn-lg">
+                        <button type="submit" class="btn btn-dark btn-lg mt-2">
 
-                            <i class="bi bi-send-fill me-2"></i>
+                            <i class="bi bi-send-fill me-2 text-info"></i>
 
                             Enviar mensagem
 
                         </button>
 
+
                     </form>
+
 
 
                     <!-- =============================
                          OUTRAS FORMAS DE CONTATO
                          ============================= -->
 
-                    <hr class="my-5">
+                    <h2 class="text-white fw-bold mt-5 mb-4">
 
-
-                    <h3 class="text-primary fw-bold mb-4">
+                        <i class="bi bi-person-lines-fill me-2"></i>
 
                         Outras formas de contato
 
-                    </h3>
+                    </h2>
 
 
-                    <div class="mb-3">
+                    <div class="row g-3">
 
-                        <i class="bi bi-envelope-fill text-primary me-2"></i>
 
-                        <strong>E-mail:</strong>
+                        <!-- E-mail -->
+                        <div class="col-12 col-md-6">
 
-                        contato@seudominio.com
+                            <div class="border border-dark rounded-3 p-4 h-100">
+
+                                <h5 class="fw-bold text-dark">
+
+                                    <i class="bi bi-envelope-fill me-2"></i>
+
+                                    E-mail
+
+                                </h5>
+
+
+                                <p class="text-dark mb-0">
+
+                                    contato@seudominio.com
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Telefone -->
+                        <div class="col-12 col-md-6">
+
+                            <div class="border border-dark rounded-3 p-4 h-100">
+
+                                <h5 class="fw-bold text-dark">
+
+                                    <i class="bi bi-telephone-fill me-2"></i>
+
+                                    Telefone
+
+                                </h5>
+
+
+                                <p class="text-dark mb-0">
+
+                                    (21) 00000-0000
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Horário -->
+                        <div class="col-12 col-md-6">
+
+                            <div class="border border-dark rounded-3 p-4 h-100">
+
+                                <h5 class="fw-bold text-dark">
+
+                                    <i class="bi bi-clock-fill me-2"></i>
+
+                                    Atendimento
+
+                                </h5>
+
+
+                                <p class="text-dark mb-0">
+
+                                    Segunda a sexta, das 9h às 18h.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Localização -->
+                        <div class="col-12 col-md-6">
+
+                            <div class="border border-dark rounded-3 p-4 h-100">
+
+                                <h5 class="fw-bold text-dark">
+
+                                    <i class="bi bi-geo-alt-fill me-2"></i>
+
+                                    Localização
+
+                                </h5>
+
+
+                                <p class="text-dark mb-0">
+
+                                    Rio de Janeiro - RJ
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
 
-                    <div>
 
-                        <i class="bi bi-telephone-fill text-primary me-2"></i>
+                    <!-- =============================
+                         NOSSO ATENDIMENTO
+                         ============================= -->
 
-                        <strong>Telefone:</strong>
+                    <h2 class="text-white fw-bold mt-5 mb-3">
 
-                        (21) 00000-0000
+                        <i class="bi bi-headset me-2"></i>
+
+                        Atendimento Personalizado
+
+                    </h2>
+
+
+                    <p class="text-dark">
+
+                        Cada projeto possui necessidades diferentes.
+                        Por isso, buscamos entender cuidadosamente
+                        cada solicitação antes de apresentar uma
+                        solução.
+
+                    </p>
+
+
+                    <p class="text-dark">
+
+                        Nosso objetivo é proporcionar uma comunicação
+                        simples, clara e transparente, mantendo o foco
+                        nas necessidades e objetivos de cada cliente.
+
+                    </p>
+
+
+
+                    <!-- =============================
+                         PROJETOS
+                         ============================= -->
+
+                    <h2 class="text-white fw-bold mt-5 mb-3">
+
+                        <i class="bi bi-lightbulb-fill me-2"></i>
+
+                        Tem uma ideia?
+
+                    </h2>
+
+
+                    <p class="text-dark">
+
+                        Se você possui uma ideia para um site, sistema
+                        ou projeto digital, entre em contato conosco.
+                        Podemos conversar sobre suas necessidades e
+                        estudar as melhores possibilidades.
+
+                    </p>
+
+
+
+                    <!-- =============================
+                         CHAMADA FINAL
+                         ============================= -->
+
+                    <div class="border border-dark rounded-4 p-4 mt-5 text-center">
+
+
+                        <h3 class="fw-bold text-dark">
+
+                            Vamos transformar sua ideia em realidade?
+
+                        </h3>
+
+
+                        <p class="text-dark">
+
+                            Estamos prontos para conhecer seu projeto
+                            e conversar sobre novas possibilidades.
+
+                        </p>
+
+
+                        <a href="mailto:contato@seudominio.com" class="btn btn-dark btn-lg mt-2">
+
+                            <i class="bi bi-envelope-fill me-2 text-info"></i>
+
+                            Fale conosco
+
+                        </a>
+
 
                     </div>
 
@@ -262,42 +498,367 @@
     </main>
 
 
+
     <!-- =============================
-         FOOTER
-         ============================= -->
+     FOOTER
+     ============================= -->
 
-    <footer class="bg-dark text-white py-5">
-
+    <footer class="bg-dark border-top border-info text-info py-5">
 
         <div class="container">
 
-            <div class="row">
+            <!-- =============================
+             LOGO DA EMPRESA NO FOOTER
+             ============================= -->
+
+            <div class="text-center m-auto">
+
+                <img src="{% static 'static/img/Logo_Designfff-removebg-preview.png' %}" alt="Logo ChavierWebMídia"
+                    class="img-fluid" mt-5 style="max-width: 350px;">
+
+            </div>
 
 
-                <!-- Coluna 1 -->
-                <div class="col-12 col-md-4 mb-4">
+            <!-- =============================
+             TECNOLOGIAS
+             ============================= -->
 
-                    <h4 class="text-info">
+            <div class="mb-5">
 
-                        Minha Empresa
+                <div class="text-center mb-4">
+
+                    <h4 class="fw-bold text-info">
+
+                        Tecnologias
 
                     </h4>
 
+                    <p class="text-white">
 
-                    <p class="text-info">
-
-                        Projeto desenvolvido para estudar
-                        Bootstrap 5 e layout responsivo.
+                        Tecnologias utilizadas em nossos projetos
 
                     </p>
 
                 </div>
 
 
-                <!-- Coluna 2 -->
-                <div class="col-12 col-md-4 mb-4">
+                <!-- Carrossel automático -->
 
-                    <h4 class="text-info">
+                <div id="carouselTecnologias" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+
+                    <div class="carousel-inner">
+
+
+                        <!-- SLIDE 1 -->
+
+                        <div class="carousel-item active">
+
+                            <div class="row justify-content-center">
+
+
+                                <!-- HTML -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-filetype-html display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            HTML5
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CSS -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-filetype-css display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            CSS3
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- JavaScript -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-filetype-js display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            JavaScript
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Bootstrap -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-bootstrap-fill display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Bootstrap
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SLIDE 2 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row justify-content-center">
+
+
+                                <!-- Python -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-code-square display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Python
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Django -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-code-slash display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Django
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Java -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-cup-hot-fill display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Java
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SLIDE 3 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row justify-content-center">
+
+
+                                <!-- Git -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-git display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Git
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- GitHub -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-github display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            GitHub
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Banco de Dados -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-database-fill display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            Banco de Dados
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APIs -->
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="text-center p-3">
+
+                                        <i class="bi bi-braces display-5 text-info"></i>
+
+                                        <p class="text-white fw-semibold mt-2">
+
+                                            APIs
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================
+             DIVISÓRIA
+             ============================= -->
+
+            <hr class="border-info">
+
+
+
+            <!-- =============================
+             COLUNAS
+             ============================= -->
+
+            <div class="row mt-5">
+
+
+                <!-- COLUNA 1 -->
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                    <h4 class="text-info fw-bold">
+
+                        ChavierWebMídia
+
+                    </h4>
+
+
+                    <p class="text-white">
+
+                        Soluções digitais modernas,
+                        responsivas e pensadas para
+                        atender às necessidades
+                        dos nossos clientes.
+
+                    </p>
+
+
+                    <a href="{% url 'contatos' %}" class="btn btn-info text-dark fw-bold">
+
+                        <i class="bi bi-chat-dots-fill me-2"></i>
+
+                        Fale conosco
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- COLUNA 2 -->
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                    <h4 class="text-info fw-bold">
 
                         Links
 
@@ -307,9 +868,11 @@
                     <ul class="list-unstyled">
 
 
-                        <li class="mb-2">
+                        <li class="mb-3">
 
-                            <a href="{% url 'home' %}" class="text-info text-decoration-none">
+                            <a href="{% url 'home' %}" class="text-white text-decoration-none">
+
+                                <i class="bi bi-house-fill me-2 text-info"></i>
 
                                 Home
 
@@ -318,9 +881,11 @@
                         </li>
 
 
-                        <li class="mb-2">
+                        <li class="mb-3">
 
-                            <a href="{% url 'sobre' %}" class="text-info text-decoration-none">
+                            <a href="{% url 'sobre' %}" class="text-white text-decoration-none">
+
+                                <i class="bi bi-building-fill me-2 text-info"></i>
 
                                 Sobre
 
@@ -329,9 +894,24 @@
                         </li>
 
 
-                        <li class="mb-2">
+                        <li class="mb-3">
 
-                            <a href="{% url 'contatos' %}" class="text-info text-decoration-none">
+                            <a href="{% url 'servicos' %}" class="text-white text-decoration-none">
+
+                                <i class="bi bi-grid-fill me-2 text-info"></i>
+
+                                Serviços
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-3">
+
+                            <a href="{% url 'contatos' %}" class="text-white text-decoration-none">
+
+                                <i class="bi bi-envelope-fill me-2 text-info"></i>
 
                                 Contatos
 
@@ -345,45 +925,243 @@
                 </div>
 
 
-                <!-- Coluna 3 -->
-                <div class="col-12 col-md-4 mb-4">
 
-                    <h4 class="text-info">
+                <!-- COLUNA 3 -->
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                    <h4 class="text-info fw-bold">
 
                         Contatos
 
                     </h4>
 
 
-                    <p class="text-info">
+                    <p class="text-white">
 
-                        <i class="bi bi-envelope me-2"></i>
+                        <i class="bi bi-envelope-fill me-2 text-info"></i>
 
                         contato@empresa.com
 
                     </p>
 
 
-                    <p class="text-info">
+                    <p class="text-white">
 
-                        <i class="bi bi-telephone me-2"></i>
+                        <i class="bi bi-telephone-fill me-2 text-info"></i>
 
                         (21) 99999-9999
 
                     </p>
+
+
+                    <p class="text-white">
+
+                        <i class="bi bi-geo-alt-fill me-2 text-info"></i>
+
+                        Rio de Janeiro - RJ
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- COLUNA 4 -->
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                    <h4 class="text-info fw-bold">
+
+                        Redes Sociais
+
+                    </h4>
+
+
+                    <p class="text-white">
+
+                        Acompanhe nossos projetos,
+                        novidades e conteúdos.
+
+                    </p>
+
+
+                    <div class="d-flex gap-3 flex-wrap">
+
+
+                        <!-- Instagram -->
+
+                        <a href="#" class="text-info fs-2" title="Instagram">
+
+                            <i class="bi bi-instagram"></i>
+
+                        </a>
+
+
+                        <!-- Facebook -->
+
+                        <a href="#" class="text-info fs-2" title="Facebook">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </a>
+
+
+                        <!-- WhatsApp -->
+
+                        <a href="#" class="text-info fs-2" title="WhatsApp">
+
+                            <i class="bi bi-whatsapp"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+
+                        <a href="#" class="text-info fs-2" title="LinkedIn">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+
+                        <!-- GitHub -->
+
+                        <a href="#" class="text-info fs-2" title="GitHub">
+
+                            <i class="bi bi-github"></i>
+
+                        </a>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <hr class="border-secondary">
+
+            <!-- =============================
+             DESTAQUE TECNOLÓGICO
+             ============================= -->
+
+            <div class="border border-info rounded-4 p-4 mt-4">
+
+
+                <div class="text-center">
+
+
+                    <h5 class="fw-bold text-info">
+
+                        <i class="bi bi-code-square me-2"></i>
+
+                        Desenvolvimento com tecnologia
+
+                    </h5>
+
+
+                    <p class="text-white mb-4">
+
+                        Criamos projetos utilizando diferentes
+                        tecnologias e ferramentas de desenvolvimento.
+
+                    </p>
+
+
+                    <div class="d-flex justify-content-center
+                            align-items-center
+                            gap-4
+                            flex-wrap">
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-filetype-html"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-filetype-css"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-filetype-js"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-bootstrap-fill"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-code-square"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-github"></i>
+
+                        </span>
+
+
+                        <span class="text-info fs-3">
+
+                            <i class="bi bi-database-fill"></i>
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================
+             FINAL
+             ============================= -->
+
+            <hr class="border-info mt-5">
 
 
             <div class="text-center text-info">
 
-                © 2026 Todos os direitos reservados -
-                Minha Empresa
+
+                <p class="mb-1">
+
+                    © 2026 Todos os direitos reservados
+
+                </p>
+
+
+                <p class="mb-0">
+
+                    <strong>
+
+                        ChavierWebMídia
+
+                    </strong>
+
+                    • Desenvolvimento e soluções digitais
+
+                </p>
+
 
             </div>
 
@@ -398,6 +1176,7 @@
          ============================= -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

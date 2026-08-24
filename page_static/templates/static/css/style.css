@@ -20,16 +20,10 @@ html {
 }
 
 body {
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
 
-  background-color: #1825e0;
-
+  font-family: 'Poppins', sans-serif;
   color: #222;
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +38,6 @@ body {
   position: relative;
   display: inline-block;
   width: 130px;
-  /* mesmo tamanho da logo normal */
   height: 130px;
   overflow: visible;
 }
@@ -68,7 +61,23 @@ body {
 
 .nav-link {
   color: #0d6efd;
+  position: relative;
+  text-decoration: none;
+}
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #62c6ec;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* ==========================================
@@ -98,6 +107,11 @@ body {
 
 }
 
+
+/* ==========================================
+   IMAGEM - PRINCIPAL HOME
+   ========================================== */
+
 .img-fluid {
   width: 10000px;
   height: auto;
@@ -106,6 +120,178 @@ body {
 }
 
 
+.col-md-5 img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+.col-md-5 img:hover {
+  transform: translateY(-8px) scale(1.03);
+
+  filter:
+    drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35)) drop-shadow(0 0 20px rgba(13, 202, 240, 0.25));
+}
+
+.display-4 {
+  position: relative;
+  display: inline-block;
+
+  color: white;
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    text-shadow 0.5s ease;
+
+  text-shadow:
+    0 0 0 rgba(13, 202, 240, 0);
+}
+
+/* Hover premium */
+
+.display-4:hover {
+  transform: translateY(-6px);
+
+  text-shadow:
+    0 0 8px rgba(13, 202, 240, 0.8),
+    0 0 20px rgba(13, 202, 240, 0.5),
+    0 0 40px rgba(13, 202, 240, 0.3);
+}
+
+/* Ícones dentro do título */
+
+.display-4 i {
+  display: inline-block;
+
+  color: #0dcaf0;
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 0.3s ease,
+    filter 0.3s ease;
+}
+
+.display-4:hover i {
+  color: #ffffff;
+
+  transform: translateY(-8px) scale(1.15);
+
+  filter:
+    drop-shadow(0 0 5px #0dcaf0) drop-shadow(0 0 15px #0dcaf0);
+}
+
+/* ==========================================
+   Cards Serviços - Glassmorphism
+   ========================================== */
+
+.card {
+  border-radius: 50px;
+}
+
+.icon-glass {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  background: rgba(13, 202, 240, 0.15);
+
+  border: 1px solid rgba(13, 202, 240, 0.4);
+
+  box-shadow:
+    0 0 15px rgba(13, 202, 240, 0.25),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(5px);
+
+  transition: all 0.4s ease;
+}
+
+
+/* Ícone */
+
+.icon-glass i {
+  font-size: 42px;
+
+  color: #0dcaf0;
+
+  filter:
+    drop-shadow(0 0 5px rgba(13, 202, 240, 0.8)) drop-shadow(0 0 15px rgba(13, 202, 240, 0.5));
+
+  transition: all 0.4s ease;
+}
+
+
+/* ==========================================
+   HOVER DO CARD
+   ========================================== */
+
+.card:hover .icon-glass {
+
+  transform: translateY(-3px) scale(1.03);
+
+  background: rgba(13, 202, 240, 0.20);
+
+  border-color: rgba(13, 202, 240, 0.5);
+
+  box-shadow:
+    0 0 15px rgba(13, 202, 240, 0.3),
+    0 0 25px rgba(13, 202, 240, 0.1);
+}
+
+.card:hover .icon-glass i {
+  transform: scale(1.15);
+
+  color: #ffffff;
+
+  filter:
+    drop-shadow(0 0 5px #0dcaf0) drop-shadow(0 0 20px #0dcaf0);
+}
+
+/* Movimento */
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  background: rgba(116, 193, 224, 0.12);
+
+  border-color: rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(116, 193, 224, 0.2);
+}
+
+/* ==========================================
+   Cards Formulário
+   ========================================== */
+
+.card-form {
+  background: #ffffff14 !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid #ffffff33 !important;
+  border-radius: 20px !important;
+
+  box-shadow: 0 8px 32px #00000059;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* MOVIMENTO AO PASSAR O MOUSE */
+.card-form:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  box-shadow:
+    0 20px 45px #00000080,
+    0 0 20px #0dcaf026;
+}
 
 /* ==========================================
    PLACEHOLDER DAS IMAGENS
@@ -166,6 +352,55 @@ body {
 
 .sobre {
   background-color: #f8f9fa;
+}
+
+
+/* ==========================================
+   HOVER SUAVE - CARDS DE CERTIFICADOS
+   ========================================== */
+
+.card-certificado {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Movimento suave */
+
+.card-certificado:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(13, 202, 240, 0.45);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(13, 202, 240, 0.12);
+}
+
+
+/* Imagem */
+
+.card-certificado .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.card-certificado:hover .card-img-top {
+  transform: scale(1.02);
+}
+
+
+/* Ícones */
+
+.card-certificado .card-body i {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card-certificado:hover .card-body i {
+  color: #0dcaf0;
+  transform: scale(1.08);
 }
 
 /* ==========================================
